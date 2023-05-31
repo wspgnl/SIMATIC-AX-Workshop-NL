@@ -1,6 +1,6 @@
 # AX standardizer tutorial TIAX usecase
 
-In this standardizer tutorial, you'll learn about all the important tools necessary to develop a ST library with SIMATIC AX and export it to TIA Portal.
+In this standardizer tutorial, you'll learn about some of the important tools necessary to develop a ST library with SIMATIC AX and export it to TIA Portal.
 The main goal of this tutorial is to get familiar with the TIAX workflow in AX and basics of the AX IDE.
 
 ![drawing](./doc/images/TIAXworkflow.png)
