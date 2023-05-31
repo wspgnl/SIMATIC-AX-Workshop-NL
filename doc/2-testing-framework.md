@@ -1,4 +1,4 @@
-# Usage of the testing framework
+# 2. Usage of the testing framework
 
 ## Goal for this training chapter
 

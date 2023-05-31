@@ -1,4 +1,4 @@
-# Setting up a project and Apax package manager usage
+# 1. Setting up a project and Apax package manager usage
 
 ## Goal for this training chapter
 

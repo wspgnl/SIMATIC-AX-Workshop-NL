@@ -1,4 +1,4 @@
-# Building library functions
+# 4. Expanding the library functionality
 
 ## Goal for this training chapter
 
@@ -112,7 +112,7 @@ END_NAMESPACE
 
 ```
 
-5. Export the TIAX project to be used in TIA portal, tip check [the previous chapter](./exportToTia.md)
+5. Export the TIAX project to be used in TIA portal, tip check [the previous chapter](./3-exportToTia.md)
 
 ## Summary
 
