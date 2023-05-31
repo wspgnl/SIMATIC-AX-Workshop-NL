@@ -1,4 +1,4 @@
-# Setup your TIAX project
+# Setting up a project and Apax package manager usage
 
 ## Goal for this training chapter
 
@@ -92,4 +92,4 @@ Goal reached? Check yourself...
 - you know the Apax extension ✔
 - you know the difference between `devDependencies` and `dependencies` ✔
 
-[Back to overview]
+[Back to overview](./../README.md)

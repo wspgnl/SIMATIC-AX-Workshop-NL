@@ -6,7 +6,6 @@ After this training chapter, you will:
 
 - know the basic workflow to create a TIA portal library from a TIAX project
 - import the library in to TIA portal
-- build your own basic functions and test them
 
 ### Executing the conversion (hands-on)
 
@@ -25,3 +24,12 @@ After this training chapter, you will:
 ![drawing](./assets/tialib.png)
 
 You might have noticed that the **MotorWrapper** includes the **Start** function and **classFB**. This is due to the call structure inside of the AX project. The **MotorWrapper** calls the **Start** function which is located inside of the public class motor. The ClassFB handles the classes inside the code internally, and cannot be implemented seperatly.
+
+## Summary
+
+Goal reached? Check yourself...
+
+- you know the workflow to create a TIA library from a TIAX project ✔
+- you can import the library into TIA Portal ✔
+
+[Back to overview](./../README.md)
