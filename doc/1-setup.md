@@ -20,7 +20,7 @@ After this training chapter, you will:
 3. You should start with a fresh window, if a old project is opened please start a fresh window by using **File > New window**
 4. Click the **Clone repository button** (1) the command palet should open, paste the copied git URL into the command palet (2) and press enter. AX will now copy the files from the repository. AX will ask to open the new folder, choose open. It might ask if the workspace can be trusted, please select yes.
 
-   ![drawing](./assets/clonegit.png)
+   ![drawing](./images/clonegit.png)
 
 ### Introducing apax.yml (information)
 
@@ -37,7 +37,7 @@ For this tutorial, we will install the AxUnit Unit testing framework from apax.
 
 Before we install all required dependencies, let's have a look into the apax.yml. The apax.yml is a configuration file for the Apax package manager. It contains all relevant information for the workspace. The screen shot below is not the Apax.yml our project currently contains.
 
-![drawing](./assets/apaxyml.png)
+![drawing](./images/apaxyml.png)
 
 #### **Project information**
 
@@ -58,17 +58,17 @@ Targets are the targets where the software will be compiled for. In our case thi
 
 #### **devDependencies**
 
-This section contains dev dependencies which are necessary during development. In this for example `@ax/sdk` version `3.0.0` is required.
+This section contains dev dependencies which are necessary during development. For example in this tutorial the `@ax/sdk` version `3.0.0` is required.
 
 #### **dependencies** and **registries**
 
-Dependencies are packages used during runtime, in other words during the execution of the code. These can be for example libraries or system functions of the S7-1500. Registries are currently not in our apax.yml but can be used to register additional registries where other packages can be found.
+Dependencies are packages that contain code that will be executed. These can be for example libraries or system functions of the S7-1500. Registries are currently not in our apax.yml but can be used to add additional registries where other packages can be found. For example the from the node regristry of the [AX Community Github](https://github.com/simatic-ax).
 
 #### Variables and scripts
 
 Scripts can be used to automate commands within Apax. For example the comand **create-tialib** will execute the command **apax build**, **apax export-tialib** and **apax import-tialib**. This is usefull for automating jobs that normally would be executed from the terminal. The variables can be used as parameters to adjust the scripts. In this case the variables will provide the necesary paths.
 
-### Installing packages trough APAX (Hands-on)
+### Installing packages trough Apax (Hands-on)
 
 In this training we'll make use of the unit test capability of AX, **@ax/axunit**. However if you inspected the apax.yml closely you might have seen that the **@ax/axunit** package is not availible in the apax.yml, and therefore not availible in the workspace. In this chapter we are installing this package.
 
@@ -77,7 +77,7 @@ In this training we'll make use of the unit test capability of AX, **@ax/axunit*
 3. Make sure to **Select** the package from the so that the window to the right is filled with more information about the package. In the right window select **version 3.0.6** from the dropdown menu.
 4. Use the **Install -D** option to install it as a development dependency. (since it is only needed during development)
 
-   ![drawing](./assets/apaxlibversion.png)
+   ![drawing](./images/apaxlibversion.png)
 
 This will install the package as a development dependency, you can check if the package is present in the apax.yml under the devDependencies.
 

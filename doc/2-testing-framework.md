@@ -19,13 +19,13 @@ Run the tests by clicking on `Run Tests`
 
 You will see the test results in the right window
 
-![drawing](./assets/test.png)
+![drawing](./images/test.png)
 
 1. Note that the test will **fail!**
 2. Open the **library.st** file (located in the **src** folder), the The test will call the **motor.start()** function. If we take a look at this function we will see that this function will allways return TRUE. However our test case expected FALSE.
 3. Since it is expected behaviour for the **motor.start()** function to return TRUE, change the expected value in the test case. And run the test again.
 
-![drawing](./assets/testcompare.png)
+![drawing](./images/testcompare.png)
 
 This time the test should have succeeded, indicated by a green checkmark instead of an red cross.
 

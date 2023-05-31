@@ -1,8 +1,8 @@
 # AX standardizer tutorial TIAX usecase
 
 In this standardizer tutorial, you'll learn about all the important tools necessary to develop a ST library with SIMATIC AX and export it to TIA Portal.
+The main goal of this tutorial is to get familiar with the TIAX workflow and basics of the AX IDE. 
 
-Although this tutorial focuses on the local IDE, the workflows are very similar in the cloud IDE.
 
 After this tutorial, you will:
 
@@ -11,8 +11,11 @@ After this tutorial, you will:
 - know how to use the AxUnit testing framework
 - be able to write basic functions
 - be able to write simple test cases
+- be able to implement the TIAX workflow
 
 This tutorial is structured in multiple sequential chapters. 
+
+Although this tutorial focuses on the local IDE, the workflows are very similar in the cloud IDE.
 
 ## Training chapters
 
@@ -21,13 +24,23 @@ This tutorial is structured in multiple sequential chapters.
 - [3. Creating the TIA portal Library](./doc/3-exportToTia.md)
 - [4. Expanding the library functionality](./doc/4-programmingOwn.md)
 
-## Additional information
+### Bonus chapters
+
+- [Introduction to OOP](./doc/oop-introduction.md)
+- [Study the AX Community Github](https://github.com/simatic-ax)
 
 ## Prerequisites
 
-- an AX account
+During the OEM workshop the following prerequisites are allready fulfilled.
+- an AX account 
 - an installation to the offline AX IDE
 - a github account
+
+## Additional information
+
+- [The AX website](https://axcite.me) (login required)
+- [The AX Community Github](https://github.com/simatic-ax)
+- [The SIOS overview page](https://support.industry.siemens.com/cs/document/109815017)
 
 ## Contribution
 
