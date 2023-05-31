@@ -15,14 +15,13 @@ This tutorial is structured in multiple sequential chapters. Be sure to read [Ap
 
 ## Training chapters
 
-- [Apax package manager usage](./doc/setup.md) (mandatory for all other chapters)
-- [Introduction to OOP](./doc/oop-introduction.md)
-- [User defined snippets](./doc/user-defined-snippets.md)
+- [Setting up a project and Apax package manager usage](./doc/setup.md) (mandatory for all other chapters)
 - [Usage of the testing framework](./doc/testing-framework.md)
+- [Creating the TIA portal Library](./doc/exportToTia.md)
+- [Building library functions](./doc/programmingOwn.md)
+
 - [Write own unit tests with AxUnit](./doc/write-tests.md) (depends on [Introduction in OOP](./doc/oop-introduction.md))
 - [Parameterized tests](./doc/parametrized-tests.md)
-- [Debugging of tests](./doc/test-debugging.md)
-- [Packing and publishing libraries](./doc/publishing-lib.md)
 
 ## Prerequisites
 
