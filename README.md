@@ -3,7 +3,6 @@
 In this standardizer tutorial, you'll learn about all the important tools necessary to develop a ST library with SIMATIC AX and export it to TIA Portal.
 The main goal of this tutorial is to get familiar with the TIAX workflow and basics of the AX IDE.
 
-
 ![drawing](./doc/images/TIAXworkflow.png)
 
 After this tutorial, you will:
@@ -21,7 +20,7 @@ Although this tutorial focuses on the local IDE, the workflows are very similar 
 
 ## Training chapters
 
-- [1. Setting up a project and Apax package manager usage](./doc/1-setup.md) (mandatory for all other chapters)
+- [1. Setting up a project and Apax package manager usage](./doc/1-setup.md)
 - [2. Usage of the testing framework](./doc/2-testing-framework.md)
 - [3. Creating the TIA portal Library](./doc/3-exportToTia.md)
 - [4. Expanding the library functionality](./doc/4-programmingOwn.md)
