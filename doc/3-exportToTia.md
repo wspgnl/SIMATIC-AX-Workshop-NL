@@ -6,6 +6,7 @@ After this training chapter, you will:
 
 - know the basic workflow to create a TIA portal library from a TIAX project
 - import the library in to TIA portal
+- know that libraries in TIA portal that are imported from AX are write protected
 
 ### Executing the conversion (hands-on)
 
@@ -20,6 +21,7 @@ After this training chapter, you will:
 3. Open a library using the open library button
 4. Find your AX project and open the **TIAPortalLibrary.al18** file located in the **bin/TIAPortalLibrary** folder.
 5. Drag the MotorWrapper FB from the library into the Main ob, and see what happens.
+6. Open one of the library blocks, note that these are write protected. This is due to the code directly being compiled from ST to machine code in AX.
 
 ![drawing](./images/tialib.png)
 
@@ -31,5 +33,8 @@ Goal reached? Check yourself...
 
 - you know the workflow to create a TIA library from a TIAX project ✔
 - you can import the library into TIA Portal ✔
+- you know that the AX imported libraries are write protected in TIA portal ✔
+
+[Continue with next chapter](./4-programmingOwn.md)
 
 [Back to overview](./../README.md)

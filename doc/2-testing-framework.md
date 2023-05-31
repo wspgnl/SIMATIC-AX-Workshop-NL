@@ -52,4 +52,6 @@ Goal reached? Check yourself...
 - you've knowledge about the command line based testing ✔
 - you know, where you find something about test coverage
 
+[Continue with next chapter](./3-exportToTia.md)
+
 [Back to overview](./../README.md)
