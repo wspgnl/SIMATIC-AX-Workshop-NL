@@ -22,6 +22,6 @@ After this training chapter, you will:
 4. Find your AX project and open the **TIAPortalLibrary.al18** file located in the **bin/TIAPortalLibrary** folder.
 5. Drag the MotorWrapper FB from the library into the Main ob, and see what happens.
 
-![drawing](assets\tialib.png)
+![drawing](./assets/tialib.png)
 
 You might have noticed that the **MotorWrapper** includes the **Start** function and **classFB**. This is due to the call structure inside of the AX project. The **MotorWrapper** calls the **Start** function which is located inside of the public class motor. The ClassFB handles the classes inside the code internally, and cannot be implemented seperatly.
