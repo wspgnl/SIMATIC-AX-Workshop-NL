@@ -20,7 +20,7 @@ After this training chapter, you will:
 3. You should start with a fresh window, if a old project is opened please start a fresh window by using **File > New window**
 4. Click the **Clone repository button** (1) the command palet should open, paste the copied git URL into the command palet (2) and press enter. AX will now copy the files from the repository. AX will ask to open the new folder, choose open. It might ask if the workspace can be trusted, please select yes.
 
-   ![](assets\20230531_155627_image.png)
+   ![drawing](assets\clonegit.png)
 
 ### Introducing apax.yml (information)
 
@@ -77,7 +77,7 @@ In this training we'll make use of the unit test capability of AX, **@ax/axunit*
 3. Make sure to **Select** the package from the so that the window to the right is filled with more information about the package. In the right window select **version 3.0.6** from the dropdown menu.
 4. Use the **Install -D** option to install it as a development dependency. (since it is only needed during development)
 
-   ![](assets\20230531_164533_image.png)
+   ![drawing](assets\apaxlibversion.png)
 
 This will install the package as a development dependency, you can check if the package is present in the apax.yml under the devDependencies.
 
