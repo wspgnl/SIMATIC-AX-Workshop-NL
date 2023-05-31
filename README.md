@@ -1,8 +1,10 @@
 # AX standardizer tutorial TIAX usecase
 
 In this standardizer tutorial, you'll learn about all the important tools necessary to develop a ST library with SIMATIC AX and export it to TIA Portal.
-The main goal of this tutorial is to get familiar with the TIAX workflow and basics of the AX IDE. 
+The main goal of this tutorial is to get familiar with the TIAX workflow and basics of the AX IDE.
 
+
+![drawing](./doc/images/TIAXworkflow.png)
 
 After this tutorial, you will:
 
@@ -13,7 +15,7 @@ After this tutorial, you will:
 - be able to write simple test cases
 - be able to implement the TIAX workflow
 
-This tutorial is structured in multiple sequential chapters. 
+This tutorial is structured in multiple sequential chapters.
 
 Although this tutorial focuses on the local IDE, the workflows are very similar in the cloud IDE.
 
@@ -32,7 +34,8 @@ Although this tutorial focuses on the local IDE, the workflows are very similar 
 ## Prerequisites
 
 During the OEM workshop the following prerequisites are allready fulfilled.
-- an AX account 
+
+- an AX account
 - an installation to the offline AX IDE
 - a github account
 

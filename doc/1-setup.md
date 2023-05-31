@@ -72,7 +72,7 @@ Scripts can be used to automate commands within Apax. For example the comand **c
 
 In this training we'll make use of the unit test capability of AX, **@ax/axunit**. However if you inspected the apax.yml closely you might have seen that the **@ax/axunit** package is not availible in the apax.yml, and therefore not availible in the workspace. In this chapter we are installing this package.
 
-1. In the sidebar open the APAX tab
+1. In the sidebar open the Apax tab
 2. Search for **axunit**
 3. Make sure to **Select** the package from the so that the window to the right is filled with more information about the package. In the right window select **version 3.0.6** from the dropdown menu.
 4. Use the **Install -D** option to install it as a development dependency. (since it is only needed during development)
