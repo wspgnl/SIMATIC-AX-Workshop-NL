@@ -22,6 +22,19 @@ After this training chapter, you will:
 
    ![drawing](./images/clonegit.png)
 
+### Introducing AX project folder structure (information)
+
+TODO tell something about apax.yml in next chapter
+src folder
+test folder
+doc folder (not required)
+
+special folder in this repo; TIA folder containing prepared TIA project for this tutorial
+
+.gitignore file, to tell git to ignore some stuff
+
+Depending on the tools used and installed more folders may be created. For example for compilation the bin folder is created. For apax packages the .apax folder.
+
 ### Introducing apax.yml (information)
 
 If you are already familiar with `Apax` and the `apax.yml` you can skip this section.
