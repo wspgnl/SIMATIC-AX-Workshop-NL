@@ -14,7 +14,7 @@ After this training chapter, you will:
 1. Copy the clone link to your clipboard:
 
    ```iec-st
-   git@github.com:wspgnl/SIMATIC-AX-Workshop-NL.git
+   git@github.com:siemens-nl-fa/Simatic-Ax-Tiax-Tutorial.git
    ```
 2. Open the AX code IDE from either your desktop or the windows start menu.
 3. You should start with a fresh window, if a old project is opened please start a fresh window by using `File > New window`
