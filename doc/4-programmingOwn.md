@@ -10,7 +10,7 @@ After this training chapter, you will:
 
 ### Write some code (hands-on)
 
-1. Create a new ST file in the **src** folder call the file **math.st**
+1. Create a new ST file in the `src` folder call the file `math.st`
 2. Write a function to do a simple addition of 2 integer variables (example below)
 
 ```iec-st
@@ -34,7 +34,7 @@ END_NAMESPACE
 
 ```
 
-3. Create a new file called **mathTest.st** in the **test** folder and Write a test case for the Add function (example below).
+3. Create a new file called `mathTest.st` in the `test` folder and Write a test case for the Add function (example below).
 
 ```iec-st
 //import required libraries

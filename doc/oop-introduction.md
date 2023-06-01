@@ -22,17 +22,16 @@ Not inlcuded in this tutorial:
 
 1. Open the `EXPLORER` view
 
-    ![drawing](./images/explorer.png)
+   ![drawing](./assets/explorer.png)
+2. Select the `src` folder + right mouse click
 
-1. Select the `src` folder + right mouse click
+   ![drawing](./assets/newfile.png)
 
-    ![drawing](./images/newfile.png)
+   > ST filed with ST code must be located in the `src folder`
+   >
+3. Enter the file name `Valve.st`
 
-    > ST filed with ST code must be located in the `src folder`
-
-1. Enter the file name `Valve.st`
-
-    ![drawing](./images/valvest.png)
+   ![drawing](./assets/valvest.png)
 
 ### Define the namespace
 
@@ -57,25 +56,25 @@ END_NAMESPACE
 ```
 
 1. Open the file `Valve.st`
-1. Create the namespace `Simatic.Ax.Tutorial`
+2. Create the namespace `Simatic.Ax.Tutorial`
 
 ### Declare the class Valve
 
 1. type `class` and a snippet `class, Class` should be provided. Select it and press `enter`
 
-    ![drawing](./images/classtemp.png)
+   ![drawing](./assets/classtemp.png)
 
-    Result:
+   Result:
 
-    ```iec-st
-    NAMESPACE Simatic.Ax.Tutorial
-        CLASS Valve
-            VAR
-                
-            END_VAR
-        END_CLASS
-    END_NAMESPACE
-    ```
+   ```iec-st
+   NAMESPACE Simatic.Ax.Tutorial
+       CLASS Valve
+           VAR
+
+           END_VAR
+       END_CLASS
+   END_NAMESPACE
+   ```
 
 ### Implement the interface IValve
 
@@ -83,104 +82,99 @@ Since Valve is a kind of any valve, the interface IValve shall be implemented.
 
 1. Implement IValve by enter `IMPLEMENTS IValve` after `CLASS Valve`
 
-    ```iec-st
-    NAMESPACE Simatic.Ax.Tutorial
-        CLASS Valve IMPLEMENTS IValve
-            VAR
-                
-            END_VAR
-        END_CLASS
-    END_NAMESPACE
-    ````
+   ```iec-st
+   NAMESPACE Simatic.Ax.Tutorial
+       CLASS Valve IMPLEMENTS IValve
+           VAR
 
-1. Fix the error `CLASS 'Valve' doesn't implement INTERFACE 'IValve'`
-    This error means, that the expected methods from IValve are not implemented.
-    In this case, hover with your mouse cursor over `IValve` and select `Quick fix...` OR press `CRTL+.`
+           END_VAR
+       END_CLASS
+   END_NAMESPACE
+   ````
+2. Fix the error `CLASS 'Valve' doesn't implement INTERFACE 'IValve'`
+   This error means, that the expected methods from IValve are not implemented.
+   In this case, hover with your mouse cursor over `IValve` and select `Quick fix...` OR press `CRTL+.`
 
-    ![drawing](./images/Quickfix.png)
+   ![drawing](./assets/Quickfix.png)
+3. Click on `Implement missing Methods`
 
-1. Click on `Implement missing Methods`
+   ![drawing](./assets/implement.png)
 
-    ![drawing](./images/implement.png)
+   Result:
 
-    Result:
+   ```iec-st
+   NAMESPACE Simatic.Ax.Tutorial
+   CLASS Valve IMPLEMENTS IValve
+       VAR
 
-    ```iec-st
-    NAMESPACE Simatic.Ax.Tutorial
-    CLASS Valve IMPLEMENTS IValve
-        VAR
-            
-        END_VAR
-    
-            METHOD PUBLIC Open
-                ;
-            END_METHOD
+       END_VAR
 
-            METHOD PUBLIC Close
-                ;
-            END_METHOD
+           METHOD PUBLIC Open
+               ;
+           END_METHOD
 
-            METHOD PUBLIC GetState : ValveState
-                ;
-            END_METHOD
-        END_CLASS
-    END_NAMESPACE
-    ```
+           METHOD PUBLIC Close
+               ;
+           END_METHOD
 
-    > eventually, you've to format the source code when the tabs are not fitting
+           METHOD PUBLIC GetState : ValveState
+               ;
+           END_METHOD
+       END_CLASS
+   END_NAMESPACE
+   ```
+
+   > eventually, you've to format the source code when the tabs are not fitting
+   >
 
 ### Declare private variables
 
 1. Go to the section VAR within the class `Valve`
+2. Write the keyword `PRIVATE` behind var
+3. Declare the variable `_valveState : BOOL;` within the `VAR PRIVATE` section
 
-1. Write the keyword `PRIVATE` behind var
+   ```iec-st
+   VAR PRIVATE
+       _valveState : BOOL;
+   END_VAR
+   ```
+4. Insert a new section `VAR PUBLIC` below `VAR PRIVATE ... END_VAR` and declare the variable `qValve : IBinOutput`
 
-1. Declare the variable `_valveState : BOOL;` within the `VAR PRIVATE` section
+   Result:
 
-    ```iec-st
-    VAR PRIVATE
-        _valveState : BOOL;
-    END_VAR
-    ```
+   ```iec-st
+   VAR PRIVATE
+       _valveState : BOOL;
+   END_VAR
 
-1. Insert a new section `VAR PUBLIC` below `VAR PRIVATE ... END_VAR` and declare the variable `qValve : IBinOutput`
-
-    Result:
-
-    ```iec-st
-    VAR PRIVATE
-        _valveState : BOOL;
-    END_VAR
-
-    VAR PUBLIC
-        qValve : IBinOutput;
-    END_VAR
-    ```
+   VAR PUBLIC
+       qValve : IBinOutput;
+   END_VAR
+   ```
 
 ### Usage of the `USING` keyword
 
 In the last step you tried to declare a variable of the type `IBinOutput`. This type is not known in the namespace `Simatic.Ax.Tutorial`. So you have to announce the namespace where `IBinOutput` is located .
 
 1. Go to the top of the file Valve.st
+2. Insert:
 
-1. Insert:
+   ```ies-st
+   USING Simatic.Ax.IO.Output; 
+   ```
 
-    ```ies-st
-    USING Simatic.Ax.IO.Output; 
-    ```
+   Result:
 
-    Result:
-     - The syntax error disappears
+   - The syntax error disappears
+   - your code should look like:
 
-     - your code should look like:
+     ```iec-st
+     USING Simatic.Ax.IO.Output;
 
-        ```iec-st
-        USING Simatic.Ax.IO.Output;
-
-        NAMESPACE Simatic.Ax.Tutorial
-            CLASS Valve IMPLEMENTS IValve
-            ...
-        ```
+     NAMESPACE Simatic.Ax.Tutorial
+         CLASS Valve IMPLEMENTS IValve
+         ...
+     ```
 
 ### Implement the methods `Open`, `Close`, `IsOpen`
 
@@ -188,37 +182,35 @@ Now, we're implementing the interface methods.
 
 1. Go to the method `Close` and implement the method as shown below:
 
-    ```iec-st
-    METHOD PUBLIC Close
-        IF (qValve <> NULL) THEN
-            qValve.SetOff();
-        END_IF;
-        _valveState := false;
-    END_METHOD
-    ```
+   ```iec-st
+   METHOD PUBLIC Close
+       IF (qValve <> NULL) THEN
+           qValve.SetOff();
+       END_IF;
+       _valveState := false;
+   END_METHOD
+   ```
+2. Go to the method `Open` and implement the method as shown below:
 
-1. Go to the method `Open` and implement the method as shown below:
+   ```iec-st
+   METHOD PUBLIC Open
+       IF (qValve <> NULL) THEN
+           qValve.SetOn();
+       END_IF;
+       _valveState := true;
+   END_METHOD
+   ```
+3. Insert the additional method `IsOpen` as shown below
 
-    ```iec-st
-    METHOD PUBLIC Open
-        IF (qValve <> NULL) THEN
-            qValve.SetOn();
-        END_IF;
-        _valveState := true;
-    END_METHOD
-    ```
+   ```iec-st
+   ...
+   METHOD PUBLIC IsOpen : BOOL
+           IsOpen := _valveState;
+   END_METHOD
 
-1. Insert the additional method `IsOpen` as shown below
-
-    ```iec-st
-    ...
-    METHOD PUBLIC IsOpen : BOOL
-            IsOpen := _valveState;
-    END_METHOD
-
-    METHOD PUBLIC Close
-    ...
-    ```
+   METHOD PUBLIC Close
+   ...
+   ```
 
 ### Usage of enumeration and `Go to definition`
 
@@ -226,42 +218,40 @@ The interface `IValve` expects a further method `GetState : ValveState`. The ret
 
 1. Implement the method GetState as below:
 
-    ```iec-st
-    METHOD PUBLIC GetState : ValveState
-        IF (_valveState) THEN 
-            GetState := ValveState#Open;
-        ELSE
-            GetState := ValveState#Closed;
-        END_IF;
-    END_METHOD
-    ```
+   ```iec-st
+   METHOD PUBLIC GetState : ValveState
+       IF (_valveState) THEN 
+           GetState := ValveState#Open;
+       ELSE
+           GetState := ValveState#Closed;
+       END_IF;
+   END_METHOD
+   ```
 
-    In the case of a closed Valve, the function returns the Value `ValveState#Closed`. In the case the valve is open, the method returns the value `ValveState#Open.
+   In the case of a closed Valve, the function returns the Value `ValveState#Closed`. In the case the valve is open, the method returns the value `ValveState#Open.
 
-    > Members of enumerations can be accessed by using TypeName#Value. For example `ValveState#Closed`
+   > Members of enumerations can be accessed by using TypeName#Value. For example `ValveState#Closed`
+   >
+2. Find the definition of `ValveState` by hovering over the word `ValveState`
+3. Jump to the definition by
 
-1. Find the definition of `ValveState` by hovering over the word `ValveState`
-1. Jump to the definition by
+   1. Press `F12`
+   2. Right mouse click and click on `Go to Definition`
 
-    1. Press `F12`  
+      ![drawing](./assets/goto.png)
+   3. press `CTRL` + `click left mouse button`
 
-    1. Right mouse click and click on `Go to Definition`
+   Result:
 
-        ![drawing](./images/goto.png)
+   The file `TypeValveStatus.st` will be opened and shows how a enumeration is defined is ST language:
 
-    1. press `CTRL` + `click left mouse button`
-
-    Result:
-
-    The file `TypeValveStatus.st` will be opened and shows how a enumeration is defined is ST language:
-
-    ```iec-st
-    NAMESPACE Simatic.Ax.Tutorial
-        TYPE
-            ValveState : (Open, Closed, Error, Undefined, HardError) := Undefined;
-        END_TYPE
-    END_NAMESPACE
-    ```
+   ```iec-st
+   NAMESPACE Simatic.Ax.Tutorial
+       TYPE
+           ValveState : (Open, Closed, Error, Undefined, HardError) := Undefined;
+       END_TYPE
+   END_NAMESPACE
+   ```
 
 ## Summary
 

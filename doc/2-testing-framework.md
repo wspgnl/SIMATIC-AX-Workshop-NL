@@ -11,21 +11,20 @@ After this training session:
 
 ### The test explorer and executing tests (hands-on)
 
-In the tutorial, there are a couple predefined tests shipped they can be executed. You can find the predefined test in the **test.st** file in the **test** folder.
+In the tutorial, a single test has been compared to be executed. You can find the predefined test in the `test.st` file in the `test` folder.
 
-Open the test explorer
+1. Open the test explorer
+2. Run the tests by clicking on `Run Tests`
+3. You will see the test results in the right window
 
-Run the tests by clicking on `Run Tests`
+![drawing](./assets/20230601_112614_image.png)
 
-You will see the test results in the right window
+4. Note that the test will **fail!**
+5. Open the `library.st` file (located in the `src` folder). The test will call the `motor.start()` function. If we take a look at this function we will see that this function will allways return `TRUE`. However our test case expected `FALSE`.
+6. Since it is expected behaviour for the `motor.start()` function to return `TRUE`, change the `expected` value in the test case. And run the test again.
 
-![drawing](./images/test.png)
 
-1. Note that the test will **fail!**
-2. Open the **library.st** file (located in the **src** folder), the The test will call the **motor.start()** function. If we take a look at this function we will see that this function will allways return TRUE. However our test case expected FALSE.
-3. Since it is expected behaviour for the **motor.start()** function to return TRUE, change the expected value in the test case. And run the test again.
-
-![drawing](./images/testcompare.png)
+![drawing](./assets/20230601_113247_image.png)
 
 This time the test should have succeeded, indicated by a green checkmark instead of an red cross.
 
