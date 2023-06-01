@@ -44,7 +44,6 @@ Folders:
 
 Depending on the tools used and installed more folders may be created. For example for compiled source code the `bin` folder is created. When apax packages are installed the `.apax` folder.
 
-
 ### Introducing apax.yml (information)
 
 If you are already familiar with `Apax` and the `apax.yml` you can skip this section.
@@ -60,7 +59,8 @@ For this tutorial, we will install the AxUnit Unit testing framework from apax.
 
 Before we install all required dependencies, let's have a look into the apax.yml. The apax.yml is a configuration file for the Apax package manager. It contains all relevant information for the workspace. The screen shot below is not the Apax.yml our project currently contains.
 
-![drawing](./images/apaxyml.png)
+
+![drawing](./assets/20230601_115148_image.png)
 
 #### **Project information**
 
